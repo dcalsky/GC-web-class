@@ -1,0 +1,5 @@
+.idea
+.Ds_Store
+processing/
+node_modules
+.tmp
