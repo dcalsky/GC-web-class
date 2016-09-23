@@ -33,7 +33,10 @@ GC --- 前端表演系课堂
 4. Angular2
  - 基础语法（装饰器、system）
  - More ...
+## 仓库结构说明
+```
 
+```
 ## 鸣谢
 **[同济大学谷歌俱乐部](http://sse.tongji.edu.cn/googlecamp)**提供的授课场地。
 
