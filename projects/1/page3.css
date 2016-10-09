@@ -1,0 +1,17 @@
+body {
+    background: pink;
+    transition: all 0.5s;
+}
+
+#zz-button {
+    padding: 20px 60px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background: white;
+    font-size: 30px;
+}
+
+#zz1-button {
+    border-radius: 100%;
+    font-size: 50px;
+}
