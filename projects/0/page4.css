@@ -1,0 +1,23 @@
+div {
+    width: 500px;
+    height: 250px;
+    text-align: center;
+    font-size: 50px;
+    transition: all 0.5s;
+}
+
+#div1 {
+    background: pink
+}
+
+#div2 {
+    background: #1976d2;
+}
+
+#div3 {
+    background: #d2d2d2;
+}
+
+#div1:hover + div {
+    background: red;
+}
