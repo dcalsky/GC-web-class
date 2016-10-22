@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+
+@font-face {
+  font-family: 'Black Ops One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Black Ops One'), local('BlackOpsOne-Regular'), url('./font.woff') format('woff');
+}
+
+body {
+    background-color: #4F7B96;
+    font-family: 'Black Ops One', 'Open Sans',sans-serif;
+    user-select: none;
+}
+
+h1 {
+    position: absolute;
+    font-size: 14rem;
+    color: white;
+    left: 50%;
+	top: 40%;
+	transform: translate(-50%, 0);
+}
+
+main {
+	width: 350px;
+	height: 350px;
+	position: absolute;
+	left: 50%;
+	top: 10%;
+	transform: translate(-50%, 0);
+	background-color: #C8F4EB;
+	border-radius: 100%;
+}
+
+div:first-of-type {
+    width: 150px;
+    height: 150px;
+    border-radius: 90% 0 55% 50% / 55% 0 90% 50%;
+    background: white;
+    position: absolute;
+    top: 28%;
+    left: 22%;
+    transform: translate(-50%, -50%);
+    transform: rotate(60deg);
+}
+
+div:first-of-type::before {
+	content: "";
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	border-radius: 90% 0 55% 50% / 55% 0 90% 50%;
+	background: #73A4CE;
+	top: -1px;
+	left: -5px;
+}
+
+div:first-of-type::after {
+	content: "";
+	position: absolute;
+	top: -25%;
+	left: 80%;
+	border-right: 30px solid transparent;
+	border-top: 20px solid #73A4CE;
+	border-left: 20px solid #73A4CE;
+	border-bottom: 20px solid #73A4CE;
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+    transform: rotate(-80deg);
+}
+
+div:nth-of-type(2) {
+	width: 20px;
+	height: 20px;
+	background-color: white;
+	border-radius: 100%;
+	position: absolute;
+	top: 50%;
+	left: 35%;
+    transform: translate(-50%, -50%);
+}
+
+div:nth-of-type(2)::after {
+	content: "";
+	position: absolute;
+	top: 2px;
+	left: 1px;
+	width: 15px;
+	height: 15px;
+	background-color: black;
+	border-radius: 100%;
+}
+
+div:nth-of-type(3) {
+	width: 7px;
+	height: 5px;
+	background-color: #4F7B96;
+	border-radius: 100%;
+	position: absolute;
+	top: 33%;
+	left: 45%;
+    transform: translate(-50%, -50%);
+}
+        </style>
+    </head>
+    <body>
+        <main>
+            <div></div>
+            <div></div>
+            <div></div>
+        </main>
+        <h1>
+            404
+        </h1>
+    </body>
+</html>
