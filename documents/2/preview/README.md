@@ -6,6 +6,8 @@
 
 ### [jQuery教程](http://www.w3school.com.cn/jquery/)
 
+[点击下载jQuery](https://code.jquery.com/jquery-3.1.1.js)
+
 
 
 ## 以下请务必下载 🙏🙏🙏🙏🙏🙏
