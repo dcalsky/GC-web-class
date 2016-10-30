@@ -1,12 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Fullpage</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
+        <title>fullpage</title>
+        <meta charset="UTF-8"> 
+        <style>
+            img {
+                width: 200px;
+            }
+            * {
+                margin: 0;
+            }
+            .section {
+                display: table;
+                width: 100%;
+                text-align: center;
+                color: white;
+                font-size: 36px;
+                font-weight: 600;
+            }
+            .section .container {
+                display: table-cell;
+                vertical-align: middle;
+            }
+            #section1 {
+                background: #FFC107;
+            }
+
+            #section2 {
+                background: #C2185B;
+            }
+
+            #section3 {
+                background: #2196F3;
+            }
+
+            #page {
+                transition: all 2s;
+            }
+        </style>
     </head>
     <body>
-        
+        <div id="page">
+            <section class="section" id="section1">
+                <div class="container">
+                    <img src="1.png" alt="">
+                    <h1>section1</h1>
+                    <p>I have a apple.</p>
+                </div>
+            </section>
+            <section class="section" id="section2">
+                <div class="container">
+                    <img src="2.png" alt="">
+                    <h1>section2</h1>
+                    <p>I have a pen.</p>
+                </div>
+            </section>
+            <section class="section" id="section3">
+                <div class="container">
+                    <img src="3.png" alt="">
+                    <h1>section3</h1>
+                    <p>oh, applepen.</p>
+                </div>
+            </section>
+        </div>
+        <script src="jquery.min.js"></script>
+        <script src="main.js"></script>
     </body>
 </html>

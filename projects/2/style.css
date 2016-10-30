@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.section {
+    width: 100%;
+    text-align: center;
+}
+
+#section1 {
+    background: #FFC107;
+}
+
+#section2 {
+    background: #C2185B;
+}
+
+#section3 {
+    background: #2196F3;
+}
