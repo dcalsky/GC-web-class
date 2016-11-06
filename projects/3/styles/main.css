@@ -1,0 +1,100 @@
+html {
+    font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", Heiti, "黑体", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", sans-serif;
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.section {
+    padding: 100px 20px;
+}
+
+#left-part {
+    position: absolute;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    background: #EF5350;
+    box-shadow: 4px 0 4px 4px #b2b2b2;
+    z-index: 100;
+    text-align: center;
+}
+
+#right-part {
+    position: absolute;
+    left: 30%;
+    width: 70%;
+    height: 100%;
+    background: white;
+}
+
+#left-part .image {
+    margin: 0 auto;
+    width: 35%;
+    margin-bottom: 20px;
+}
+
+#left-part .image img {
+    transition: all 1s;
+    width: 100%;
+    border-radius: 100%;
+}
+
+#left-part .image img:hover {
+    transform: rotate(1440deg);
+}
+
+#left-part .info {
+    margin-bottom: 45px;
+}
+
+#left-part .info h1 {
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+
+#left-part .nav li {
+    margin-top: 10px;
+}
+
+#left-part .nav li a {
+    text-decoration: none;
+    color: #FAFAFA;
+    font-size: 1.2rem;
+}
+
+#left-part .nav li a:hover {
+    text-decoration: underline;
+    color: #FAFAFA;
+}
+
+#left-part .copyright {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    right: 20px;
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+
+@keyframes slide-in-left {
+    from {
+        transform: translate(-100%, 0);
+    }
+    to {
+        transform: translate(0, 0);
+    }
+}
+.slide-in-left {
+    animation-name: slide-in-left;
+    animation-duration: .8s;
+}
