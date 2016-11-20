@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <script src="http://dreamsky.github.io/main/blog/common/jquery.min.js"></script>
+
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>特效 input - Softech</title>
+    <style>
+        html, body {
+            background-color: #eee;
+        }
+        .input {
+            margin: auto;
+            margin-top: 20%;
+            width: 30%;
+        }
+        input {
+            box-sizing: border-box;
+            height: 30px;
+            width: 100%;
+            border-radius: 30px;
+            border: #ccc solid 15px;
+            padding: 0 15px;
+            outline: none !important;
+            transition:all 0.5s;
+        }
+        input:focus {
+            /*background-color: #fd0;*/
+            border-color: #0ad;
+            border-width: 1px;
+        }
+        .hint {
+            position: relative;
+            top: -22px;
+            left: 15px;
+            float: left;
+            line-height: 15px;
+            font-size: 15px;
+            color: #888;
+            transition:all 0.3s;
+        }
+        input:focus + .hint {
+            font-size: 5px;
+            top: -45px;
+            text-shadow: 0 0 1px #fff;
+            color: #0ad;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="input">
+        <input type="text" id="input-sth" >
+        <label class="hint" for="input-sth">输入内容</label>
+    </div>
+
+    <!--script>
+        $("input")
+        .focus(function() {
+            $(".hint").text("输入内容");
+        })
+        .blur(function() {
+            var val = $(".input input").val();
+            $(".hint").text(val ? val : "输入内容");
+        });
+    </script-->
+
+</body>
+</html>

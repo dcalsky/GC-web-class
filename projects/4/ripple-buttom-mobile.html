@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>涟漪效果 Button - Softech</title>
+	<script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+	<style>
+	html, body {
+		background-color: #ffe;
+	}
+		.button {
+			margin: auto;
+			width: 400px;
+			height: 80px;
+			background-color: #00b480;
+			color: #8cffc0;
+			text-align: center;
+			line-height: 80px;
+			font-size: 25px;
+			box-shadow: 1px 1px 5px -2px #000;
+			overflow: hidden;
+			cursor: pointer;
+			user-select: none;
+			position: relative;
+		}
+		.shadow {
+			width: 1px;
+			height: 1px;
+			left: 0;
+			top: 0;
+			border-radius: 50% 50%;
+			background-color: #cfc;
+			box-shadow: 0 0 60px 30px #cfc;
+			opacity: 0;
+			pointer-events: none;
+			position: absolute;
+			transition: opacity 0.6s;
+		}
+		.ripple {
+			border-radius: 50% 50%;
+			background-color: #cfc;
+			width: 0px;
+			height: 0px;
+			position: absolute;
+			pointer-events: none;
+			transition: all 1s;
+			transition-duration: ease-out;
+		}
+		.ripple-out {
+			transform: translate3d(-200px, -200px, 0);
+			width: 400px;
+			height: 400px;
+			opacity: 0;
+		}
+	</style>
+</head>
+
+<body>
+	<div style="width:100%; margin-top: 20%;">
+		<div class="button">
+			Click me!
+		</div>
+	</div>
+	<script>
+		var locked = false;
+		$(".button")
+		.append('<div class="shadow"></div>')
+		.mouseleave(function() {
+			$('.shadow').css('opacity', 0);
+		})
+		.mouseenter(function() {
+			$('.shadow').css('opacity', 0.2);
+		})
+		.mousemove(function(event) {
+			var
+				x = event.offsetX,
+				y = event.offsetY;
+			console.log(x, y);
+			$('.shadow').css('top', y).css('left', x);
+		})
+		.click(function(event) {
+			console.log(event);
+			var
+				x = event.offsetX,
+				y = event.offsetY,
+				time = event.timeStamp;
+			$(".button").append('<div class="ripple" name="' + time + '"></div>');
+			console.log(x, y);
+			var rip = $('.ripple[name="' + time + '"]'); 
+			setTimeout(function() {
+				rip.remove();
+			}, 800);
+			rip
+			.css('top', y)
+			.css('left', x);
+			setTimeout(function() {
+				rip
+				.addClass('ripple-out');
+			}, 10);
+
+			
+
+		});
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jumping text - Softech</title>
+	<script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+	<style>
+		html, body {
+			background-color: #fec;
+		}
+		.display-box {
+			text-align: center;
+			margin-top: 20px;
+			margin-bottom: 30px;
+			padding: 10px;
+		}
+		.jumping-text {
+			color: #A65200;
+			display: inline;
+			font-size: 30px;
+			text-align: center;
+			line-height: 50px;
+			transition: all 0.5s;
+			position: relative;
+			top: 10px;
+		}
+		span {
+			position: relative;
+		}
+
+		.fall:hover span {
+			animation: fallAni 1s ease-out;
+		}
+		.fall:hover span:nth-child(1) {
+			animation-delay: 0;
+		}
+		.fall:hover span:nth-child(2) {
+			animation-delay: 100ms;
+		}
+		.fall:hover span:nth-child(3) {
+			animation-delay: 200ms;
+		}
+		.fall:hover span:nth-child(4) {
+			animation-delay: 300ms;
+		}
+		.fall:hover span:nth-child(5) {
+			animation-delay: 400ms;
+		}
+		.fall:hover span:nth-child(6) {
+			animation-delay: 500ms;
+		}
+		.fall:hover span:nth-child(7) {
+			animation-delay: 600ms;
+		}
+		@keyframes fallAni {
+			0%, 30% {
+				top: -30px;
+				opacity: 0;
+			}
+			60%, 100% {
+				top: 0px;
+				opacity: 1;
+			}
+		}
+		
+		.jump:hover span {
+			animation: jumpAni 1s ease-out;
+		}
+		.jump:hover span:nth-child(1) {
+			animation-delay: 0;
+		}
+		.jump:hover span:nth-child(2) {
+			animation-delay: 100ms;
+		}
+		.jump:hover span:nth-child(3) {
+			animation-delay: 200ms;
+		}
+		.jump:hover span:nth-child(4) {
+			animation-delay: 300ms;
+		}
+		.jump:hover span:nth-child(5) {
+			animation-delay: 400ms;
+		}
+		.jump:hover span:nth-child(6) {
+			animation-delay: 500ms;
+		}
+		.jump:hover span:nth-child(7) {
+			animation-delay: 600ms;
+		}
+		@keyframes jumpAni {
+			0%, 10%, 60%, 100% {
+				top: 0;
+			}
+			30% {
+				top: -10px;
+			}
+		}
+
+		.scale:hover span {
+			animation: scaleAni 1s ease-out;
+		}
+		.scale:hover span:nth-child(1) {
+			animation-delay: 0;
+		}
+		.scale:hover span:nth-child(2) {
+			animation-delay: 100ms;
+		}
+		.scale:hover span:nth-child(3) {
+			animation-delay: 200ms;
+		}
+		.scale:hover span:nth-child(4) {
+			animation-delay: 300ms;
+		}
+		.scale:hover span:nth-child(5) {
+			animation-delay: 400ms;
+		}
+		.scale:hover span:nth-child(6) {
+			animation-delay: 500ms;
+		}
+		.scale:hover span:nth-child(7) {
+			animation-delay: 600ms;
+		}
+		
+		@keyframes scaleAni {
+			0%, 10%, 60%, 100% {
+				top: 0;
+			}
+			30% {
+				font-size: 35px;
+			}
+		}
+
+		.color:after {
+			content: "xiu";
+			position: absolute;
+			background-color: #fec;
+			color: #fcc;
+			width: 100%;
+			height: 0%;
+			top: 0px;
+			left: 0px;
+			line-height: 1;
+			opacity: 1;
+			overflow: hidden;
+			transition: all 0.3s;
+		}
+		.color:hover:after {
+			height: 100%;
+			opacity: 1;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div class="display-box">
+		<div class="jumping-text fall">
+			<span>Why</span>
+			<span>are</span>
+			<span>you</span>
+			<span>looking</span>
+			<span>at</span>
+			<span>me</span>
+			<span>?</span>
+		</div>
+	</div>
+	<div class="display-box">
+		<div class="jumping-text jump">
+			<span>Why</span>
+			<span>are</span>
+			<span>you</span>
+			<span>looking</span>
+			<span>at</span>
+			<span>me</span>
+			<span>?</span>
+		</div>
+	</div>
+	<div class="display-box">
+		<div class="jumping-text scale">
+			<span>Why</span>
+			<span>are</span>
+			<span>you</span>
+			<span>looking</span>
+			<span>at</span>
+			<span>me</span>
+			<span>?</span>
+		</div>
+	</div>
+	<div class="display-box">
+		<div class="jumping-text color">
+			<span>Why</span>
+			<span>are</span>
+			<span>you</span>
+			<span>looking</span>
+			<span>at</span>
+			<span>me</span>
+			<span>?</span>
+		</div>
+	</div>
+</body>
+
+</html>

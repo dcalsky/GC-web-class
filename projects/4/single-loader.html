@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>涟漪效果 Button - Softech</title>
+	<script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+	<style>
+		head, body {
+			background-color: #000;
+		}
+		h1 {
+			margin: 5% auto;
+			text-align: center;
+			color: #cef;
+		}
+		.container {
+			width: 100px;
+			height: 100px;
+			margin: 5% auto; 
+			background-color: transparent;
+			position: relative;
+			box-shadow: 0 0 10px 1px #cef;
+		}
+		.load2 {
+			width: 20px;
+			height: 20px;
+			top: 40px;
+			left: 40px;
+			background-color: transparent;
+			border-radius: 50% 50%;
+			position: absolute;
+			animation: circle 1.3s;
+			animation-iteration-count: infinite;			
+		}
+		@keyframes circle {
+			0.0%, 100% {
+				box-shadow:
+					0.00px 40.00px 0.00px -3.00px #0cf,
+					28.28px 28.28px 0.00px 0.00px #0cf,
+					40.00px 0.00px 0.00px -3.00px #0cf,
+					28.28px -28.28px 0.00px -10.00px #0cf,
+					0.00px -40.00px 0.00px -10.00px #0cf,
+					-28.28px -28.28px 0.00px -10.00px #0cf,
+					-40.00px -0.00px 0.00px -10.00px #0cf,
+					-28.28px 28.28px 0.00px -10.00px #0cf;
+				}
+			12.5% {
+				box-shadow:
+					0.00px 40.00px 0.00px -10.00px #0cf,
+					28.28px 28.28px 0.00px -3.00px #0cf,
+					40.00px 0.00px 0.00px 0.00px #0cf,
+					28.28px -28.28px 0.00px -3.00px #0cf,
+					0.00px -40.00px 0.00px -10.00px #0cf,
+					-28.28px -28.28px 0.00px -10.00px #0cf,
+					-40.00px -0.00px 0.00px -10.00px #0cf,
+					-28.28px 28.28px 0.00px -10.00px #0cf;
+				}
+			25.0% {
+			box-shadow:
+					0.00px 40.00px 0.00px -10.00px #0cf,
+					28.28px 28.28px 0.00px -10.00px #0cf,
+					40.00px 0.00px 0.00px -3.00px #0cf,
+					28.28px -28.28px 0.00px 0.00px #0cf,
+					0.00px -40.00px 0.00px -3.00px #0cf,
+					-28.28px -28.28px 0.00px -10.00px #0cf,
+					-40.00px -0.00px 0.00px -10.00px #0cf,
+					-28.28px 28.28px 0.00px -10.00px #0cf;
+				}
+			37.5% {
+			box-shadow:
+					0.00px 40.00px 0.00px -10.00px #0cf,
+					28.28px 28.28px 0.00px -10.00px #0cf,
+					40.00px 0.00px 0.00px -10.00px #0cf,
+					28.28px -28.28px 0.00px -3.00px #0cf,
+					0.00px -40.00px 0.00px 0.00px #0cf,
+					-28.28px -28.28px 0.00px -3.00px #0cf,
+					-40.00px -0.00px 0.00px -10.00px #0cf,
+					-28.28px 28.28px 0.00px -10.00px #0cf;
+				}
+			50.0% {
+			box-shadow:
+					0.00px 40.00px 0.00px -10.00px #0cf,
+					28.28px 28.28px 0.00px -10.00px #0cf,
+					40.00px 0.00px 0.00px -10.00px #0cf,
+					28.28px -28.28px 0.00px -10.00px #0cf,
+					0.00px -40.00px 0.00px -3.00px #0cf,
+					-28.28px -28.28px 0.00px 0.00px #0cf,
+					-40.00px -0.00px 0.00px -3.00px #0cf,
+					-28.28px 28.28px 0.00px -10.00px #0cf;
+				}
+			62.5% {
+			box-shadow:
+					0.00px 40.00px 0.00px -10.00px #0cf,
+					28.28px 28.28px 0.00px -10.00px #0cf,
+					40.00px 0.00px 0.00px -10.00px #0cf,
+					28.28px -28.28px 0.00px -10.00px #0cf,
+					0.00px -40.00px 0.00px -10.00px #0cf,
+					-28.28px -28.28px 0.00px -3.00px #0cf,
+					-40.00px -0.00px 0.00px 0.00px #0cf,
+					-28.28px 28.28px 0.00px -3.00px #0cf;
+			}
+			75.0% {
+				box-shadow:
+					0.00px 40.00px 0.00px -3.00px #0cf,
+					28.28px 28.28px 0.00px -10.00px #0cf,
+					40.00px 0.00px 0.00px -10.00px #0cf,
+					28.28px -28.28px 0.00px -10.00px #0cf,
+					0.00px -40.00px 0.00px -10.00px #0cf,
+					-28.28px -28.28px 0.00px -10.00px #0cf,
+					-40.00px -0.00px 0.00px -3.00px #0cf,
+					-28.28px 28.28px 0.00px 0.00px #0cf;
+			}
+			87.5% {
+				box-shadow:
+					0.00px 40.00px 0.00px 0.00px #0cf,
+					28.28px 28.28px 0.00px -3.00px #0cf,
+					40.00px 0.00px 0.00px -10.00px #0cf,
+					28.28px -28.28px 0.00px -10.00px #0cf,
+					0.00px -40.00px 0.00px -10.00px #0cf,
+					-28.28px -28.28px 0.00px -10.00px #0cf,
+					-40.00px -0.00px 0.00px -10.00px #0cf,
+					-28.28px 28.28px 0.00px -3.00px #0cf;
+				}
+			
+		}
+		.load1 {
+			width: 10px;
+			height: 40px;
+			background-color: #0cf;
+			position: absolute;
+			left: 45px;
+			top: 30px;
+			border-radius: 2px;
+
+			animation: scale 1s;
+			animation-delay: 0.15s;
+			animation-iteration-count: infinite;	
+		}
+		.load1:before {
+			content: "";
+			width: 10px;
+			height: 40px;
+			background-color: #0cf;
+			position: absolute;
+			left: -15px;
+			border-radius: 2px;
+
+			animation: scale 1s;
+			animation-delay: 0.0s;
+			animation-iteration-count: infinite;
+		}
+		.load1:after {
+			content: "";
+			width: 10px;
+			height: 40px;
+			background-color: #0cf;
+			position: absolute;
+			left: 15px;
+			border-radius: 2px;
+
+			animation: scale 1s;
+			animation-delay: 0.3s;
+			animation-iteration-count: infinite;
+		}
+
+		@keyframes scale {
+			0%, 70%, 100% {
+				box-shadow: 
+					0 0 0 0 #0cf, 
+					0 0 0 0 #0cf;
+			}
+			35% {
+				box-shadow: 
+					0 -15px 0 0 #0cf, 
+					0 15px 0 0 #0cf;
+			}
+			
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Single Loader</h1>
+	<div class="container">
+		<div class="load1">
+		</div>
+	</div>
+	<div class="container">
+		<div class="load2">
+
+		</div>
+	</div>
+</body>
+
+</html>
