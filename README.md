@@ -11,8 +11,7 @@ GC --- 七周七前端技术
 
 ## 地点
 直播 + 录屏
-
-地址另行通知
+[斗鱼直播](https://www.douyu.com/tongji666)
 
 ## 讲师
 - [周左左](https://github.com/dcalsky)
