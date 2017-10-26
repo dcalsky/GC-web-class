@@ -10,8 +10,8 @@ GC --- 七周七前端技术
 时长不超过一小时
 
 ## 地点
-直播 + 录屏
-[斗鱼直播](https://www.douyu.com/tongji666)
+直播 + 录屏（见下方）
+[Bilibili直播地址](https://live.bilibili.com/5990698)
 
 ## 讲师
 - [周左左](https://github.com/dcalsky)
