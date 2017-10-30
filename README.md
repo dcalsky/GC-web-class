@@ -30,5 +30,9 @@ GC --- 七周七前端技术
 
 * [第一期](https://v.douyu.com/show/kJmbBMk63Oe740XA) 前5分钟高音量高能预警，请各位注意。
 
+## Slides
+* [第一期](http://slides.com/yihengzhou/npm)
+* [第二期](http://slides.com/yihengzhou/gulp-webpack)
+
 ## 鸣谢
 **[同济大学谷歌俱乐部](http://sse.tongji.edu.cn/googlecamp)**。
